@@ -1,21 +1,8 @@
-/*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
+'use strict';
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<h2 id="role">%data%</h2>';
 var HTMLheaderPic = '<img src=%data% alt="my head shot">';
-var HTMLsummary = '<h3>%data%</h3>';
+var HTMLmessage = '<h3>%data%</h3>';
 
 //var HTMLcontactGeneric = '<li><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile ='<li><a href = "tel:%data%"><i class="fa fa-phone-square fa-2x"></i></a></li>';
@@ -25,10 +12,13 @@ var HTMLgithub = '<li><a href = "%data%"><li><i class="fa fa-github-square fa-2x
 var HTMLportfolio = '<li><a href = "%data%"><i class="fa fa-facebook-square fa-2x"></i></a></li>';
 var HTMLlocation = '<li><a href = "%data%"><i class="fa fa-map-marker fa-2x"></i></a></li>';
 
-
-
-// var HTMLskillsStart = '<h3 id="skills-h3"></h3><ul id="skills"</ul>';
-// var HTMLskills = '<li class="skill-entry"><span>%data%</span></li>';
+var HTMLskillStart = '<h3 id="skills-h3"></h3><ul id="skills"</ul>';
+var HTMLskills = '<li><span class="expand html5"></span><em>%data%</em></li>';
+// var HTMLskills2 = '<li><span class="expand css3"></span><em>%data%</em></li>';
+// var HTMLskills3 = '<li><span class="expand jquery"></span><em>%data%</em></li>';
+// var HTMLskills4 = '<li><span class="expand javascript"></span><em>%data%</em></li>';
+// var HTMLskills5 = '<li><span class="expand python"></span><em>%data%</em></li>';
+// var HTMLskills6 = '<li><span class="expand git"></span><em>%data%</em></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a>%data%';
@@ -47,7 +37,7 @@ var HTMLprojectDescription = '<ul><br><li>%data1%</li><li>%data2%</li><li>%data3
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a>%data%';
-var HTMLschoolDegree = '<li> -- %data%</li></a>';
+var HTMLschoolMajor = '<li> -- %data%</li></a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 
@@ -73,7 +63,7 @@ $(document).ready(function() {
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
-clickLocations = [];
+//clickLocations = [];
 
 function logClicks(x,y) {
   clickLocations.push(
