@@ -305,6 +305,10 @@ a {
     color: white;
 }
 
+#footer li{
+    display: inline-flex;
+}
+
 /*style skills*/
 #skills {
     list-style: none;
