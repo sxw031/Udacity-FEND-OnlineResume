@@ -5,14 +5,14 @@ var skills = ["HTML5", "CSS3", "JavaScript", "Python", "Canvas", "Git"];
 var contacts = {
 	"mobile": "510-944-9912",
 	"email": "jameswangishere@gmail.com",
-	"linkedin": "https://www.linkedin.com/in/jameswangishere",
+	"linkedin": "https://www.linkedin.com/in/billstone",
 	"github": "https://github.com/JamesWangbrothers",
 	"portfolio": "https://www.facebook.com/jameswong300",
 	"location": "#mapDiv"	
 };
 
 var bio = {
-	"name": "James Wang",
+	"name": "Bill Stone",
 	"role": "Full Stack Web Developer",
 	"contacts": contacts,
 	"skills": skills,
